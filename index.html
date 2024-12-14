@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Técnico Jbc</title>
     <link rel="stylesheet" href="css\styles.css">
+    <!--<script src="js\script.js"></script>-->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>emailjs.init("efcS9LNTsm3pmzDm4");</script>
+
 </head>
 <body>
     <!-- Header -->
@@ -64,12 +68,28 @@
     </section>
 
     <!-- Contact -->
-    <footer id="contact">
-        <div class="container">
-            <h2>Contacto</h2>
-            <p>Email: blogtecnico@example.com</p>
-            <p>Síguenos en redes sociales</p>
-        </div>
-    </footer>
+    <!-- Contact Section -->
+<footer id="contact">
+    <div class="container">
+        <h2>Contacto</h2>
+        <form id="contactForm">
+            <div>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+            </div>
+            <div>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" placeholder="Tu mensaje" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="formResponse" style="color: green; display: none;">¡Gracias por tu mensaje! Te responderemos pronto.</p>
+    </div>
+    <script src="js\script.js"></script>
+</footer>
 </body>
 </html>
